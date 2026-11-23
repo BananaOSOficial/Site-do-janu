@@ -150,7 +150,7 @@
 	  #whatsapp {
 		  display: flex;
 		  align-items: center;
-      background: linear-gradient(#4A7C59,#6FB873);
+      background: linear-gradient(90deg, #4A7C59,#6FB873);
       height: fit-content;
       width: fit-content;
       border-radius: 14px;
@@ -178,17 +178,21 @@
 		  height: 32px;
       z-index: 100;
 		  border: none;
+		  transition: transform 0.35s ease;
 	  }
 	  .fecharjanelacontato svg {
 		  width: 32px;
 		  height: 32px;
 	  }
+		.fecharjanelacontato:hover {
+			transform: scale(1.1);
+		}
 	  .fecharjanelacontato svg path {
 		  transition: fill 0.35s ease;
       fill: #000;
 	  }
 	  .fecharjanelacontato:hover svg path {
-		  fill: #6FB873;
+		  fill: green;
 	  }
     .menubtns {
       display: flex;
