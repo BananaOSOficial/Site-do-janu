@@ -272,16 +272,8 @@
 		  width: 32px;
 		  height: 32px;
 	  }
-		.fecharjanelacontato:hover {
-			transform: scale(1.1);
-			transform: translateY(-50%);
-		}
 	  .fecharjanelacontato svg path {
-		  transition: fill 0.35s ease;
       fill: #fff;
-	  }
-	  .fecharjanelacontato:hover svg path {
-		  fill: #3A5F46;
 	  }
     .menubtns {
       display: flex;
@@ -454,6 +446,8 @@ contato.onclick = function() {
 	janelacontato.classList.add('aberta');
 }
 fecharjanelacontato.onclick = function() {
+	const svg = fecharjanelacontato.querySelector('svg');
+	svg.style.fill = '#3A5F46';
 	janelacontato.classList.remove('aberta');
 }
 abrirmenubtn.onclick = function() {
