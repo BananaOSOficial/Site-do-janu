@@ -188,11 +188,11 @@
 		  width: 100dvw;
 		  height: 100dvh;
       z-index: 102;
-		  background: linear-gradient(rgba(165,214,167,0.9)), url("grama.jpeg");
+		  background: linear-gradient(rgba(165,214,167,0.5)), url("grama.jpeg");
 		  background-size: 100% 100%, cover;
 		  transform: translateY(-110%);
 		  color: #fff;
-		  transition: transform 1s ease;
+		  transition: transform 0.6s ease;
 	  }
     #janelacontato p {
       margin-top: 10px;
@@ -281,10 +281,61 @@
 		  height: 32px;
 	  }
 	  .fecharjanelacontato svg path {
-		  transition: fill 0.1s ease;
+		  transition: fill 0.05s ease;
       fill: #fff;
 	  }
 		.fecharjanelacontato:hover svg path {
+			fill: #446F52;
+		}
+		#janelasobrenos {
+			height: 100dvh;
+			width: 100dvw;
+			position: fixed;
+			top: 0;
+			background: linear-gradient(rgba(165,214, 167, 0.5), url("gramacortada.jpg"));
+			transform: translateY(-150%);
+			transition: transform 0.6s ease;
+			text-align: center;
+			background-size: 100% 100%, cover;
+		}
+		#janelasobrenos h2 {
+			margin-top: 10px;
+		}
+		#janelasobrenos.aberta {
+			transform: translateY(0);
+		}
+		.headerjanelasobrenos {
+			position: relative;
+			height: 50px;
+			padding-bottom: 5px;
+			width: 100%;
+			border-bottom: 2px solid #3A5F46;
+			box-shadow: 0 0 5px #3A5F46;
+			border-radius: 0 0 5px 5px;
+			background: linear-gradient(90deg, #4A7C59, #6FB873);
+			color: #fff;
+		}
+		.headerjanelasobrenos h2 {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#fecharjanelasobrenos {
+			position: absolute;
+			top: 50%;
+		    left: 5px;
+			width: 32px;
+			height: 32px;
+			border: none;
+			background: transparent;
+			transform: translateY(-50%);
+		}
+		#fecharjanelasobrenos svg path {
+			transition: fill 0.05s ease;
+			fill: #fff;
+		}
+		#fecharjanelasobrenos:hover svg path {
 			fill: #446F52;
 		}
     .menubtns {
@@ -426,7 +477,23 @@
 <button class="contato"><svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
 <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"></path>
 </svg>Contato</button>
+	  <button id="sobre"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM8.96963 8.96965C9.26252 8.67676 9.73739 8.67676 10.0303 8.96965L12 10.9393L13.9696 8.96967C14.2625 8.67678 14.7374 8.67678 15.0303 8.96967C15.3232 9.26256 15.3232 9.73744 15.0303 10.0303L13.0606 12L15.0303 13.9696C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0303 15.0303C9.73742 15.3232 9.26254 15.3232 8.96965 15.0303C8.67676 14.7374 8.67676 14.2625 8.96965 13.9697L10.9393 12L8.96963 10.0303C8.67673 9.73742 8.67673 9.26254 8.96963 8.96965Z" fill="#fff"/>
+	  </svg>Sobre nós</button>
   </div>
+</div>
+<div id="janelasobrenos">
+	<div class="headerjanelasobrenos">
+		<h2>Sobre nós</h2>
+		<button id="fecharjanelasobrenos"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM8.96963 8.96965C9.26252 8.67676 9.73739 8.67676 10.0303 8.96965L12 10.9393L13.9696 8.96967C14.2625 8.67678 14.7374 8.67678 15.0303 8.96967C15.3232 9.26256 15.3232 9.73744 15.0303 10.0303L13.0606 12L15.0303 13.9696C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0303 15.0303C9.73742 15.3232 9.26254 15.3232 8.96965 15.0303C8.67676 14.7374 8.67676 14.2625 8.96965 13.9697L10.9393 12L8.96963 10.0303C8.67673 9.73742 8.67673 9.26254 8.96963 8.96965Z" fill="#fff"/>
+		</svg></button>
+	</div>
+	<h2>Quem é Januário?</h2>
+	<p>Olá! sou o Januário, e sou o profissional por trás da Mdaçu Limp. Atuo na area de jardinagem e roçada e meu maior compromisso é com o capricho e a pontualidade. Transformo seu terreno em um lugar limpo, bonito e agradável para você e sua família. Atendo em Mandaguaçu, sempre com preço justo e dedicação do início ao fim.</p>
+	<p>Conte comigo para cuidar do seu jardim!</p>
+	<h2>Quem é o desenvolvedor do site?</h2>
+	<p>O desenvolvedor do site é o Luiz Fernando, ele tem 16 anos.</p>
 </div>
 <div id="janelacontato">
 <div class="headerjanelacontato">
@@ -450,7 +517,18 @@ const contato = document.querySelector('.contato');
 const janelacontato = document.getElementById('janelacontato');
 const fecharjanelacontato = document.querySelector('.fecharjanelacontato');
 const whatsappdiv = document.getElementById('whatsapp');
-
+const janelasobrenos = document.getElementById('janelasobrenos');
+const sobre = document.getElementById('sobre');
+const fecharjanelasobrenos = document.getElementById('fecharjanelasobrenos');
+const svgdobotaofecharsbnos = fecharjanelasobrenos.querySelector('svg path');
+	sobre.onclick = function() {
+		janelasobrenos.classList.add('aberta');
+		svgdobotaofecharsbnos.style.fill = '';
+	}
+	fecharjanelasobrenos.onclick = function() {
+		janelasobrenos.classList.remove('aberta');
+		svgdobotaofecharsbnos.style.fill = '3A5F46';
+	}
 	whatsappdiv.addEventListener('click', () => {
 		let numerojanu = '554498897882';
 		window.open(`https://wa.me/${numerojanu}`, "_blank");
