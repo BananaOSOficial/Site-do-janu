@@ -440,6 +440,8 @@ const whatsappdiv = document.getElementById('whatsapp');
 		window.open(`https://wa.me/${numerojanu}`, "_blank");
 	});
 contato.onclick = function() {
+	const svg = fecharjanelacontato.querySelector('svg path');
+	svg.style.fill = '#fff';
   abrirmenubtn.classList.remove('selecionado');
   menu.classList.remove('aberto');
   abrirmenubtn.style.left = '5px';
