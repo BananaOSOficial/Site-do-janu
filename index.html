@@ -29,9 +29,10 @@
 		}
 	}
 		main img:first-of-type {
-          border-radius: 10px !important;
-		  width: 90px !important;
-		  height: 90px !important;
+          border-radius: 10px;
+		  width: 90px;
+		  height: 90px;
+	      justify-self: center;
 		}
 		* {
 			margin: 0;
@@ -170,9 +171,6 @@
 	  #abrirmenubtn svg {
 		  width: 32px;
 		  height: 32px;
-	  }
-	  #abrirmenu svg path {
-		  transition: fill 0.35s ease;
 	  }
 	  #janelacontato {
 		  position: fixed;
@@ -399,13 +397,7 @@
 		box-shadow: 0 0 5px #3A5F46;
 		border-bottom: 2px solid #3A5F46;
       border-radius: 0 5px 0 0;
-    }
-		img {
-			max-width: 200px;
-			max-height: 200px;
-			border: 2px solid #3A5F46;
-			justify-self: center;
-		}
+	}
 		p {
 			text-align: center;
 			margin-top: 10px;
@@ -455,6 +447,7 @@
 			align-items: center;
 			border-radius: 14px;
 			box-shadow: 0 0 5px #3A5F46;
+			border: 2px solid #3A5F46;
 		}
 		.depois {
 			display: flex;
@@ -464,10 +457,13 @@
 			width: fit-content;
 			height: fit-content;
 			border-radius: 14px;
+			border: 2px solid #3A5F46;
 			box-shadow: 0 0 5px #3A5F46;
 		}
 		.antes img {
 			border-radius: 0 0 14px 14px !important;
+			width: 200px !important;
+			height: 200px !important;
 		}
 		.antes p {
 			background-color: #3A5F46 !important;
@@ -487,6 +483,8 @@
 		}
 		.depois img {
 			border-radius: 0 0 14px 14px !important;
+			width: 200px !important;
+			height: 200px !important;
 		}
 		.textosobre {
 			position: fixed;
